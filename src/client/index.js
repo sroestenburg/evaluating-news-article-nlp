@@ -1,6 +1,5 @@
-import { checkForUrl } from './js/urlChecker';
 import { handleSubmit } from './js/formHandler';
-
+import { checkForUrl } from './js/urlchecker';
 
 import './styles/resets.scss';
 import './styles/base.scss';

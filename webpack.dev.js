@@ -5,6 +5,9 @@ const { CleanWebpackPlugin } = require ('clean-webpack-plugin');
 module.exports = merge(common,{
     mode: 'development',
     devtool: 'source-map', 
+    devServer:{
+        port: 8080
+    },
     module: {
         rules: [
             {

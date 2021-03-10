@@ -2,10 +2,11 @@ function handleSubmit(event) {
     event.preventDefault()
     errorMsg.innerHTML = ''
     let urlInput = document.getElementById('url').value
-    console.log("test");
+
     let input = {
         url: encodeURI(urlInput)
     }
+    console.log(input)
     if (Client.checkForUrl(urlInput)) {
         postData('/analysis', input)
     } else {
@@ -24,7 +25,7 @@ function displayErrorMsg() {
 
 async function postData(url, data) {
 
-    const response = await fetch(url, {
+    const response = await fetch('http://localhost:8081' + url, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
